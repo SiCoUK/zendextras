@@ -15,19 +15,19 @@
  * @category    ZendX
  * @package     ZendX_JQuery
  * @subpackage  View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license     http://framework.zend.com/license/new-bsd     New BSD License
- * @version     $Id: UiWidget.php 20165 2010-01-09 18:57:56Z bkarwin $
+ * @version     $Id$
  */
 
-// require_once "Zend/Form/Element.php";
+//require_once "Zend/Form/Element.php";
 
 /**
  * Base Form Element for jQuery View Helpers
  *
  * @package    ZendX_JQuery
  * @subpackage Form
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class ZendX_JQuery_Form_Element_UiWidget extends Zend_Form_Element
@@ -49,9 +49,8 @@ class ZendX_JQuery_Form_Element_UiWidget extends Zend_Form_Element
     /**
      * Constructor
      *
-     * @param  mixed $spec
-     * @param  mixed $options
-     * @return void
+     * @param mixed $spec
+     * @param mixed $options
      */
     public function __construct($spec, $options = null)
     {
@@ -165,7 +164,7 @@ class ZendX_JQuery_Form_Element_UiWidget extends Zend_Form_Element
                 }
             }
             if($foundUiWidgetElementMarker === false) {
-                // require_once "ZendX/JQuery/Form/Exception.php";
+                //require_once "ZendX/JQuery/Form/Exception.php";
                 throw new ZendX_JQuery_Form_Exception(
                     "Cannot render jQuery form element without at least one decorator ".
                     "implementing the 'ZendX_JQuery_Form_Decorator_UiWidgetElementMarker' interface. ".

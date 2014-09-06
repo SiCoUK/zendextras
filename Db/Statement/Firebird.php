@@ -15,7 +15,7 @@
  * @category   ZendX
  * @package    ZendX_Db
  * @subpackage Statement
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id: $
  */
@@ -23,7 +23,7 @@
 /**
  * @see Zend_Db_Statement
  */
-// require_once 'Zend/Db/Statement.php';
+//require_once 'Zend/Db/Statement.php';
 
 /**
  * Extends for Firebird
@@ -31,7 +31,7 @@
  * @category   ZendX
  * @package    ZendX_Db
  * @subpackage Statement
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class ZendX_Db_Statement_Firebird extends Zend_Db_Statement
@@ -105,7 +105,7 @@ class ZendX_Db_Statement_Firebird extends Zend_Db_Statement
             /**
              * @see ZendX_Db_Statement_Firebird_Exception
              */
-            // require_once 'ZendX/Db/Statement/Firebird/Exception.php';
+            //require_once 'ZendX/Db/Statement/Firebird/Exception.php';
             throw new ZendX_Db_Statement_Firebird_Exception("Firebird prepare error: " . ibase_errmsg());
         }
     }
@@ -245,7 +245,7 @@ class ZendX_Db_Statement_Firebird extends Zend_Db_Statement
             /**
              * @see ZendX_Db_Statement_Firebird_Exception
              */
-            // require_once 'ZendX/Db/Statement/Firebird/Exception.php';
+            //require_once 'ZendX/Db/Statement/Firebird/Exception.php';
             throw new ZendX_Db_Statement_Firebird_Exception("Firebird statement execute error : " . $last_error);
         }               
 
@@ -325,7 +325,7 @@ class ZendX_Db_Statement_Firebird extends Zend_Db_Statement
                 /**
                  * @see ZendX_Db_Adapter_Firebird_Exception
                  */
-                // require_once 'ZendX/Db/Statement/Firebird/Exception.php';
+                //require_once 'ZendX/Db/Statement/Firebird/Exception.php';
                 throw new ZendX_Db_Statement_Firebird_Exception(
                     "Invalid fetch mode '$style' specified"
                 );
@@ -349,7 +349,7 @@ class ZendX_Db_Statement_Firebird extends Zend_Db_Statement
         /**
          * @see ZendX_Db_Statement_Firebird_Exception
          */
-        // require_once 'ZendX/Db/Statement/Firebird/Exception.php';
+        //require_once 'ZendX/Db/Statement/Firebird/Exception.php';
         throw new ZendX_Db_Statement_Firebird_Exception(__FUNCTION__.'() is not implemented');
     }
 

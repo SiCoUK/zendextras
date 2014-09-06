@@ -14,15 +14,15 @@
  *
  * @category  ZendX
  * @package   ZendX_Whois
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd     New BSD License
- * @version   $Id: Exception.php 20165 2010-01-09 18:57:56Z bkarwin $
+ * @version   $Id$
  */
 
 /**
  * @see ZendX_Exception
  */
-// require_once 'ZendX/Exception.php';
+//require_once 'ZendX/Exception.php';
 
 /**
  * Exception class for ZendX_Console
@@ -30,7 +30,7 @@
  * @category  ZendX
  * @package   ZendX_Console
  * @uses      Zend_Exception
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd     New BSD License
  */
 class ZendX_Console_Exception extends ZendX_Exception

@@ -15,30 +15,30 @@
  * @category    ZendX
  * @package     ZendX_JQuery
  * @subpackage  View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license     http://framework.zend.com/license/new-bsd     New BSD License
- * @version     $Id: JQuery.php 20184 2010-01-10 21:22:54Z freak $
+ * @version     $Id$
  */
 
 /**
  * @see ZendX_JQuery
  */
-// require_once "ZendX/JQuery.php";
+//require_once "ZendX/JQuery.php";
 
 /**
  * @see Zend_Registry
  */
-// require_once 'Zend/Registry.php';
+//require_once 'Zend/Registry.php';
 
 /**
  * @see Zend_View_Helper_Abstract
  */
-// require_once 'Zend/View/Helper/Abstract.php';
+//require_once 'Zend/View/Helper/Abstract.php';
 
 /**
  * @see ZendX_JQuery_View_Helper_JQuery_Container
  */
-// require_once "ZendX/JQuery/View/Helper/JQuery/Container.php";
+//require_once "ZendX/JQuery/View/Helper/JQuery/Container.php";
 
 /**
  * jQuery Helper. Functions as a stack for code and loads all jQuery dependencies.
@@ -46,7 +46,7 @@
  * @uses 	   Zend_Json
  * @package    ZendX_JQuery
  * @subpackage View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class ZendX_JQuery_View_Helper_JQuery extends Zend_View_Helper_Abstract
@@ -64,19 +64,17 @@ class ZendX_JQuery_View_Helper_JQuery extends Zend_View_Helper_Abstract
 	 */
     private static $noConflictMode = false;
 
-   /**
+    /**
      * Initialize helper
      *
      * Retrieve container from registry or create new container and store in
      * registry.
-     *
-     * @return void
      */
     public function __construct()
     {
         $registry = Zend_Registry::getInstance();
         if (!isset($registry[__CLASS__])) {
-            // require_once 'ZendX/JQuery/View/Helper/JQuery/Container.php';
+            //require_once 'ZendX/JQuery/View/Helper/JQuery/Container.php';
             $container = new ZendX_JQuery_View_Helper_JQuery_Container();
             $registry[__CLASS__] = $container;
         }
@@ -116,7 +114,7 @@ class ZendX_JQuery_View_Helper_JQuery extends Zend_View_Helper_Abstract
     public function __call($method, $args)
     {
         if (!method_exists($this->_container, $method)) {
-            // require_once 'Zend/View/Exception.php';
+            //require_once 'Zend/View/Exception.php';
             throw new Zend_View_Exception(sprintf('Invalid method "%s" called on jQuery view helper', $method));
         }
 

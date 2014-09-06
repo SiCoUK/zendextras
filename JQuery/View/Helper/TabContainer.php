@@ -15,15 +15,15 @@
  * @category    ZendX
  * @package     ZendX_JQuery
  * @subpackage  View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license     http://framework.zend.com/license/new-bsd     New BSD License
- * @version     $Id: TabContainer.php 20165 2010-01-09 18:57:56Z bkarwin $
+ * @version     $Id$
  */
 
 /**
  * @see ZendX_JQuery_View_Helper_UiWidget
  */
-// require_once "ZendX/JQuery/View/Helper/UiWidget.php";
+//require_once "ZendX/JQuery/View/Helper/UiWidget.php";
 
 /**
  * jQuery Tabs Container View Helper
@@ -31,7 +31,7 @@
  * @uses 	   Zend_Json
  * @package    ZendX_JQuery
  * @subpackage View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class ZendX_JQuery_View_Helper_TabContainer extends ZendX_JQuery_View_Helper_UiWidget

@@ -15,22 +15,22 @@
  * @category    ZendX
  * @package     ZendX_JQuery
  * @subpackage  View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license     http://framework.zend.com/license/new-bsd     New BSD License
- * @version     $Id: JQuery.php 21867 2010-04-16 07:45:34Z beberlei $
+ * @version     $Id$
  */
 
 /**
  * @see Zend_Json
  */
-// require_once "Zend/Json.php";
+//require_once "Zend/Json.php";
 
 /**
  * jQuery Global Class holding constants and static convienience methods.
  *
  * @todo       Offer convenience methods to add a tab or accordion container/pane combination.
  * @package    ZendX_JQuery
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
   */
 class ZendX_JQuery
@@ -150,7 +150,7 @@ class ZendX_JQuery
             /**
              * @see Zend_Json
              */
-            // require_once "Zend/Json.php";
+            //require_once "Zend/Json.php";
         }
         return Zend_Json::encode($value, false, array('enableJsonExprFinder' => true));
     }

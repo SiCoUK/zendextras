@@ -15,15 +15,15 @@
  * @category    ZendX
  * @package     ZendX_JQuery
  * @subpackage  View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license     http://framework.zend.com/license/new-bsd     New BSD License
- * @version     $Id: AutoComplete.php 20752 2010-01-29 11:31:30Z beberlei $
+ * @version     $Id$
  */
 
 /**
  * @see ZendX_JQuery_View_Helper_UiWidget
  */
-// require_once "ZendX/JQuery/View/Helper/UiWidget.php";
+//require_once "ZendX/JQuery/View/Helper/UiWidget.php";
 
 /**
  * jQuery Autocomplete View Helper
@@ -31,7 +31,7 @@
  * @uses 	   Zend_Json, Zend_View_Helper_FormText
  * @package    ZendX_JQuery
  * @subpackage View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class ZendX_JQuery_View_Helper_AutoComplete extends ZendX_JQuery_View_Helper_UiWidget
@@ -66,7 +66,7 @@ class ZendX_JQuery_View_Helper_AutoComplete extends ZendX_JQuery_View_Helper_UiW
                 $params['source'] = $params['data'];
                 unset($params['data']);
             } else {
-                // require_once "ZendX/JQuery/Exception.php";
+                //require_once "ZendX/JQuery/Exception.php";
                 throw new ZendX_JQuery_Exception(
                     "Cannot construct AutoComplete field without specifying 'source' field, ".
                     "either an url or an array of elements."

@@ -15,15 +15,15 @@
  * @category    ZendX
  * @package     ZendX_JQuery
  * @subpackage  View
- * @copyright   Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright   Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license     http://framework.zend.com/license/new-bsd     New BSD License
- * @version     $Id: Container.php 25219 2013-01-11 18:16:56Z frosch $
+ * @version     $Id$
  */
 
 /**
  * @see ZendX_JQuery
  */
-// require_once 'ZendX/JQuery.php';
+//require_once 'ZendX/JQuery.php';
 
 /**
  * jQuery View Helper. Transports all jQuery stack and render information across all views.
@@ -31,7 +31,7 @@
  * @uses       ZendX_JQuery_View_Helper_JQuery_Container
  * @package    ZendX_JQuery
  * @subpackage View
- * @copyright  Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class ZendX_JQuery_View_Helper_JQuery_Container
@@ -437,7 +437,7 @@ class ZendX_JQuery_View_Helper_JQuery_Container
     public function onLoadCaptureStart()
     {
         if ($this->_captureLock) {
-            // require_once 'Zend/Exception.php';
+            //require_once 'Zend/Exception.php';
             throw new Zend_Exception('Cannot nest onLoad captures');
         }
 
@@ -468,7 +468,7 @@ class ZendX_JQuery_View_Helper_JQuery_Container
     public function javascriptCaptureStart()
     {
         if ($this->_captureLock) {
-            // require_once 'Zend/Exception.php';
+            //require_once 'Zend/Exception.php';
             throw new Zend_Exception('Cannot nest captures');
         }
 

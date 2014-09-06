@@ -15,19 +15,19 @@
  * @category    ZendX
  * @package     ZendX_JQuery
  * @subpackage  View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license     http://framework.zend.com/license/new-bsd     New BSD License
- * @version     $Id: UiWidgetContainer.php 24955 2012-06-13 20:36:50Z rob $
+ * @version     $Id$
  */
 
-// require_once "Zend/Form/Decorator/Abstract.php";
+//require_once "Zend/Form/Decorator/Abstract.php";
 
 /**
  * Abstract Form Decorator for all jQuery UI Widget Containers
  *
  * @package    ZendX_JQuery
  * @subpackage Form
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 abstract class ZendX_JQuery_Form_Decorator_UiWidgetContainer extends Zend_Form_Decorator_Abstract
@@ -53,12 +53,13 @@ abstract class ZendX_JQuery_Form_Decorator_UiWidgetContainer extends Zend_Form_D
     /**
      * Get view helper for rendering container
      *
+     * @throws Zend_Form_Decorator_Exception
      * @return string
      */
     public function getHelper()
     {
         if (null === $this->_helper) {
-            // require_once 'Zend/Form/Decorator/Exception.php';
+            //require_once 'Zend/Form/Decorator/Exception.php';
             throw new Zend_Form_Decorator_Exception('No view helper specified fo DijitContainer decorator');
         }
         return $this->_helper;

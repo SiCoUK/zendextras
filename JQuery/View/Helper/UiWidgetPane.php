@@ -15,23 +15,23 @@
  * @category    ZendX
  * @package     ZendX_JQuery
  * @subpackage  View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license     http://framework.zend.com/license/new-bsd     New BSD License
- * @version     $Id: UiWidgetPane.php 20165 2010-01-09 18:57:56Z bkarwin $
+ * @version     $Id$
  */
 
 /**
  * @see ZendX_JQuery_View_Helper_UiWidget
  */
-// require_once "UiWidget.php";
+//require_once "UiWidget.php";
 
 /**
  * jQuery Pane Base class, adds captureStart/captureEnd functionality for panes.
  *
- * @uses 	   ZendX_JQuery_View_Helper_JQuery_Container
+ * @uses       ZendX_JQuery_View_Helper_JQuery_Container
  * @package    ZendX_JQuery
  * @subpackage View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 abstract class ZendX_JQuery_View_Helper_UiWidgetPane extends ZendX_JQuery_View_Helper_UiWidget
@@ -56,12 +56,13 @@ abstract class ZendX_JQuery_View_Helper_UiWidgetPane extends ZendX_JQuery_View_H
      * @param  string $id
      * @param  string $name
      * @param  array  $options
-     * @return void
+     * @throws ZendX_JQuery_View_Exception
+     * @return boolean
      */
     public function captureStart($id, $name, array $options=array())
     {
         if (array_key_exists($id, $this->_captureLock)) {
-            // require_once 'ZendX/JQuery/View/Exception.php';
+            //require_once 'ZendX/JQuery/View/Exception.php';
             throw new ZendX_JQuery_View_Exception(sprintf('Lock already exists for id "%s"', $id));
         }
 
@@ -78,12 +79,13 @@ abstract class ZendX_JQuery_View_Helper_UiWidgetPane extends ZendX_JQuery_View_H
      * Finish capturing content for layout container
      *
      * @param  string $id
+     * @throws ZendX_JQuery_View_Exception
      * @return string
      */
     public function captureEnd($id)
     {
         if (!array_key_exists($id, $this->_captureLock)) {
-            // require_once 'ZendX/JQuery/View/Exception.php';
+            //require_once 'ZendX/JQuery/View/Exception.php';
             throw new ZendX_JQuery_View_Exception(sprintf('No capture lock exists for id "%s"; nothing to capture', $id));
         }
 

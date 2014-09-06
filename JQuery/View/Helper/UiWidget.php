@@ -15,20 +15,20 @@
  * @category    ZendX
  * @package     ZendX_JQuery
  * @subpackage  View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license     http://framework.zend.com/license/new-bsd     New BSD License
- * @version     $Id: UiWidget.php 20165 2010-01-09 18:57:56Z bkarwin $
+ * @version     $Id$
  */
 
 /**
  * @see ZendX_JQuery_View_Helper_UiWidget
  */
-// require_once "Zend/View/Helper/HtmlElement.php";
+//require_once "Zend/View/Helper/HtmlElement.php";
 
 /**
  * @see ZendX_JQuery
  */
-// require_once "ZendX/JQuery.php";
+//require_once "ZendX/JQuery.php";
 
 /**
  * jQuery Ui Widget Base class
@@ -36,7 +36,7 @@
  * @uses 	   ZendX_JQuery_View_Helper_JQuery_Container
  * @package    ZendX_JQuery
  * @subpackage View
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 abstract class ZendX_JQuery_View_Helper_UiWidget extends Zend_View_Helper_HtmlElement

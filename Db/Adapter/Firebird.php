@@ -15,7 +15,7 @@
  * @category   ZendX
  * @package    ZendX_Db
  * @subpackage Adapter
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id: $
  */
@@ -23,29 +23,29 @@
 /**
  * @see Zend_Db_Adapter_Abstract
  */
-// require_once 'Zend/Db/Adapter/Abstract.php';
+//require_once 'Zend/Db/Adapter/Abstract.php';
 
 /**
  * @see Zend_Db_Profiler
  */
-// require_once 'Zend/Db/Profiler.php';
+//require_once 'Zend/Db/Profiler.php';
 
 /**
  * @see Zend_Db_Select
  */
-// require_once 'Zend/Db/Select.php';
+//require_once 'Zend/Db/Select.php';
 
 /**
  * @see Zend_Db_Statement_Firebird
  */
-// require_once 'ZendX/Db/Statement/Firebird.php';
+//require_once 'ZendX/Db/Statement/Firebird.php';
 
 
 /**
  * @category   ZendX
  * @package    ZendX_Db
  * @subpackage Adapter
- * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
@@ -251,11 +251,13 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
         return $desc;
     }
 
-
     /**
      * Format a connection string to connect to database
      *
-     * @return void
+     * @param string $host
+     * @param int    $port
+     * @param string $dbname
+     * @return string
      */
     protected function _formatDbConnString($host, $port, $dbname)
     {
@@ -265,7 +267,6 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             $dbname = ':' . $dbname;
 
         return $host . $port . $dbname;
-
     }
 
     /**
@@ -284,7 +285,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             /**
              * @see ZendX_Db_Adapter_Firebird_Exception
              */
-            // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+            //require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
             throw new ZendX_Db_Adapter_Firebird_Exception('The Interbase extension is required for this adapter but the extension is not loaded');
         }
 
@@ -305,7 +306,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             /**
              * @see ZendX_Db_Adapter_Firebird_Exception
              */
-            // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+            //require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
             throw new ZendX_Db_Adapter_Firebird_Exception(ibase_errmsg());
         }
     }
@@ -397,6 +398,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
     /**
      * Commit a transaction.
      *
+     * @throws ZendX_Db_Adapter_Firebird_Exception
      * @return void
      */
     protected function _commit()
@@ -405,7 +407,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             /**
              * @see ZendX_Db_Adapter_Firebird_Exception
              */
-            // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+            //require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
             throw new ZendX_Db_Adapter_Firebird_Exception(ibase_errmsg());
         }
         $this->_transResource = null;
@@ -414,6 +416,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
     /**
      * Roll-back a transaction.
      *
+     * @throws ZendX_Db_Adapter_Firebird_Exception
      * @return void
      */
     protected function _rollBack()
@@ -422,7 +425,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             /**
              * @see ZendX_Db_Adapter_Firebird_Exception
              */
-            // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+            //require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
             throw new ZendX_Db_Adapter_Firebird_Exception(ibase_errmsg());
         }
         $this->_transResource = null;
@@ -432,6 +435,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
      * Set the fetch mode.
      *
      * @param int $mode
+     * @throws ZendX_Db_Adapter_Firebird_Exception
      * @return void
      */
     public function setFetchMode($mode)
@@ -450,7 +454,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
                 /**
                  * @see ZendX_Db_Adapter_Firebird_Exception
                  */
-                // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+                //require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
                 throw new ZendX_Db_Adapter_Firebird_Exception("Invalid fetch mode '$mode' specified");
         }
     }
@@ -471,7 +475,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             /**
              * @see ZendX_Db_Adapter_Firebird_Exception
              */
-            // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+            //require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
             throw new ZendX_Db_Adapter_Firebird_Exception("LIMIT argument count=$count is not valid");
         }
 
@@ -480,7 +484,7 @@ class ZendX_Db_Adapter_Firebird extends Zend_Db_Adapter_Abstract
             /**
              * @see ZendX_Db_Adapter_Firebird_Exception
              */
-            // require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
+            //require_once 'ZendX/Db/Adapter/Firebird/Exception.php';
             throw new ZendX_Db_Adapter_Firebird_Exception("LIMIT argument offset=$offset is not valid");
         }
 
